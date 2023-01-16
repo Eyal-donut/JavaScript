@@ -1,8 +1,7 @@
-function getMovieData(data) {
-//   const objArray = [];
-//   data.forEach(function (release) {
-//     objArray.push({ id: release.id, title: release.title });
+function doubleValues(arr) {
+//   const doubles = arr.map(function (d) {
+//     return (d * 2);
 //   });
-//   return objArray;
+//   return doubles
 // }
-// console.log(getMovieData(newReleases));
+// console.log(doubleValues(numArray));
