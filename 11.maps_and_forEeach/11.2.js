@@ -22,13 +22,14 @@ console.log(onlyEvenValues(numArray));
 function showFirstAndLast(arr) {
   const firstLastArray = [];
   const mapArray = arr.map(function (arg, index) {
-    if (index === 0 || index === arr.length - 1) {
-      return firstLastArray.push(arg.toString());
+    if (typeof arg === 'string') {
+    // if (index === 0 || index === arr.length - 1) {
+      return firstLastArray.push(arg);
     }
   });
-  return firstLastArray;
+  return [firstLastArray[0], firstLastArray[firstLastArray.length - 1]];
 }
-console.log(showFirstAndLast(numArray)); 
+console.log(showFirstAndLast(testArray)); 
 
 //Q4
 const testString = "Hello";

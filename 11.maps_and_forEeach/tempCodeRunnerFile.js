@@ -1,7 +1,3 @@
-function doubleValues(arr) {
-//   const doubles = arr.map(function (d) {
-//     return (d * 2);
-//   });
-//   return doubles
-// }
-// console.log(doubleValues(numArray));
+  for (const i of food3) {
+//     obj[i] ? obj[i]++ : (obj[i] = 1);
+//   }
