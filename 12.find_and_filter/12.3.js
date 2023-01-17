@@ -54,6 +54,8 @@ function findPerson(type, id1) {
 }
 findPerson("students", 12);
 
+
+
 function assignStudent(id1, subject) {
   let moveStudent = school.students.find((person) => {
     return person.id.toString().includes(id1);
@@ -73,8 +75,24 @@ function assignStudent(id1, subject) {
 }
 assignStudent("10", "chemistry");
 
+
+
 function assignTeachersSubject(id2, newSubject) {
-    let result = school.teachers.find((person) => {
-        return person.id.toString().includes(id1);
-      });
+  let teacher = school.teachers.find((person) => {
+    return person.id.toString().includes(id2);
+  });
+  if (!teacher.subjects.includes(newSubject)) {
+    teacher.subjects.push(newSubject);
+  }
+  console.log(teacher);
 }
+assignTeachersSubject("1", "law");
+
+function assignLastName (id3, lastName) {
+let student = school.students.find((person) => {
+    return person.id.toString().includes(id3);
+  });
+  student.name = student.name + " " + lastName
+  console.log(student);
+}
+assignLastName("10", "Lopez");
