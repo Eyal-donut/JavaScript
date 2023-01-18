@@ -16,10 +16,9 @@ if (mikeAvgScore === johnAvgScore) {
     `The winners are ${winner} and ${winner2}, with the average score of ${johnAvgScore}`
   );
 } else if (mikeAvgScore > johnAvgScore) {
-  johnAvgScore = teamAverage(mikesTeam);
   winner = "Mikes team";
   console.log(
-    `The winner is ${winner}, with the average score of ${johnAvgScore}`
+    `The winner is ${winner}, with the average score of ${mikeAvgScore}`
   );
 }
 

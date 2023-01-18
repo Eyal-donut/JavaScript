@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-/* const namesFromArray = (arr) => {
+const namesFromArray = (arr) => {
         const result = arr.map(function (na) {
             return na.name
         })
@@ -59,7 +59,7 @@ const data = [
         console.log(adultsArray)
         return adultsArray
     }
-    console.log(before1990(data)) */
+    console.log(before1990(data))
 
 //  const howMuchFood = (arr) => {
 //      const favFoods = arr.map(function (foo){
