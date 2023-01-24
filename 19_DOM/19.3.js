@@ -26,10 +26,9 @@ const fillFromClipboard = (event) => {
     .toLowerCase();
   if (realPass.join("") === [...paste].join("")) {
     form.submit();
-    alert("Yayy");
+    alert("Great Success!");
   } 
 };
-
 
 inputArray.forEach((input) => {
   input.addEventListener("keyup", (event) => fillBox(input));
