@@ -96,17 +96,21 @@ const peopleNames = data.map(function (person){
   return person.name
 })
 // Question 2: Extract to an array all the job positions for all the people.
-const positions = data.map((person, job)=> {
-person.jobs //=
-
-});
+const jobPositions = data.map(person => person.jobs.map(job =>(job.position))).flat(); 
+console.log("JobPositions", jobPositions)
 
 
 // Question 3: Find the average age of the people.
+const avgAge = data.reduce((sum, person)=> sum + person.age, 0) / data.length;
+console.log(avgAge)
 
 // Question 4: Return an array with the unique cities where the people live.
+const uniqCities =[...new Set(data.map(person => person.address.city))]
+  console.log(uniqCities)
 
 // Question 5: Extract to an array a list of all the people's hobbies in alphabetical order.
+const hobbiesArray = (data.map((person)=> person.hobbies)).flat().sort()
+console.log(hobbiesArray)
 
 // Question 6: Get the total number of years of experience for all the people in the data.
 
