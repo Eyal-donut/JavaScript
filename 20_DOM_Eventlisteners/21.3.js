@@ -13,7 +13,7 @@ const charCounter = (textarea) => {
 
 button.addEventListener("click", function (event) {
   event.preventDefault();
-  if (charCounter(textarea) >= 3) {
+  if (charCounter(textarea) >= 100) {
     form.submit();
   } else {
     label.innerHTML = `<label for="text-field">Why are you interested in this position?</label>
