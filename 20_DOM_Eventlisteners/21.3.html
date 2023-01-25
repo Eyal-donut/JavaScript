@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./21.3.js" defer></script>
+    <title>Document</title>
+    <style>
+        :root{
+            font-size: 62.5%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.4rem;
+        }
+        label {
+            display: block;
+        }
+        textarea {
+            height: 200px;
+            width: 500px;
+        }
+        button {
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+            width: 150px;
+        }
+        textarea.error{
+            border: 1px solid red;
+        }
+        label.error{
+            font-size: 2.2rem;
+            color: red;
+        }
+     
+    </style>
+</head>
+<body>
+    <form>
+        <label for="text-field">Why are you interested in this position?</label>
+        <textarea type="" name="text-field" id="text-field"></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

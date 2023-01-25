@@ -1,5 +1,5 @@
 const input = document.querySelectorAll("form > div input");
-const inputArray = Array.from(input);
+const inputArray = Array.from(textarea);
 const form = document.querySelector("form");
 const button = document.querySelector(".btn");
 
