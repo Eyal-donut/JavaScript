@@ -1,4 +1,3 @@
-const smiley = document.querySelector(".smiley");
 const num = document.querySelector("input");
 const button = document.querySelector("button");
 const container2 = document.querySelector(".container2");
