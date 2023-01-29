@@ -1,9 +1,3 @@
-//when I press right arrow, next td becomes active
-
-//function that makes a td active
-
-//targeting next sibling of active
-
 let active = document.querySelector(".active");
 let nextSibling = active.nextElementSibling;
 
