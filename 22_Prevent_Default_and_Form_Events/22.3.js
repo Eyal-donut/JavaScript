@@ -16,9 +16,9 @@ function removeClass(variable) {
 
 function makeRandomChar() {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  const randomChar = alphabet[Math.floor(Math.random() * alphabet.length)];
-  return randomChar;
+  return randomChar = alphabet[Math.floor(Math.random() * alphabet.length)];
 }
+makeRandomChar();
 
 function handler(e) {
     const keyPressed = e.key
