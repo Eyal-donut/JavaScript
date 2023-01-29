@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./22.1.js" defer></script>
+    <title>22.1</title>
+    <style>
+      :root {
+        font-size: 62.5%;
+      }
+      * {
+        font-size: 2.4rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body,
+      html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        margin-bottom: 1.5rem;
+        height: 3.4rem;
+      }
+      .checkbox input {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+     
+      .modal,
+      .send-confirmation,
+      #checkbox-alert {
+        display: none;
+      }
+     
+      .modal.display {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .send-confirmation.display {
+        color: rgb(52, 142, 52);
+        display: block;
+      }
+      #checkbox-alert.display {
+        display: block;
+        color: rgb(207, 28, 28);
+      }
+      .details-confirmation {
+        width: 50rem;
+        height: 60rem;
+        background: #ffffff;
+        border: solid 0.5rem #333;
+        padding: 2rem;
+    }
+    h1 {
+        text-align: center;
+        font-size: 3.4rem;
+        margin-bottom: 2rem;
+      }
+    button {
+        width: 16rem;
+        height: 5rem;
+        margin: 0 1rem;
+        cursor: pointer;
+        border-radius: 0.6rem;
+    }
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="name">Full name: </label>
+      <input type="text" id="name" name="name" />
+      <label for="age">Age: </label>
+      <input type="number" id="age" name="age" />
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" />
+      <div class="checkbox">
+        <label>I agree that my data will be sold and used against me</label>
+        <input type="checkbox" id="checkbox" name="checkbox" />
+      </div>
+      <p id="checkbox-alert">You gotta check the box😈</p>
+      <input type="submit" />
+    </form>
+    <div class="modal">
+      <div class="details-confirmation">
+        <h1>Please confirm your input and click submit</h1>
+        <ul>
+            <li id="li-name"></li>
+            <li id="li-age"></li>
+            <li id="li-email"></li>
+        </ul>
+        <div class="buttons-container">
+            <button id="submit-btn">Submit</button>
+            <button id="change-btn">Change input</button>
+        </div>
+        <p class="send-confirmation">Congratulations, you successfully sent this form</p>
+      </div>
+    </div>
+  </body>
+</html>
