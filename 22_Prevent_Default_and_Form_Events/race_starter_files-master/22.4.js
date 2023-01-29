@@ -7,10 +7,13 @@
 let active = document.querySelector(".active");
 let nextSibling = active.nextElementSibling;
 
-let active2 = document.querySelector(".active2")
+let active2 = null
+function findActive2 (){
+    const collection = document.getElementsByClassName("active")
+    return active2 = collection[1];
+}
+findActive2();
 let nextSibling2 = active2.nextElementSibling;
-
-// const element = document.getElementsByClassName("active")
 
 //plyer 1
 function makeNextActiveP1() {
@@ -19,11 +22,12 @@ function makeNextActiveP1() {
     active = document.querySelector(".active");
     nextSibling = active.nextElementSibling;
 }
+
 //plyer 2
 function makeNextActiveP2() {
-    nextSibling2.classList.add("active2");
-    active2.classList.remove("active2");
-    active2 = document.querySelector(".active2");
+    nextSibling2.classList.add("active");
+    active2.classList.remove("active");
+    findActive2();
     nextSibling2 = active2.nextElementSibling;
 }
 
