@@ -15,7 +15,10 @@ const gameBoard = document.getElementById("game-board");
 
 function main(currentTime) {
     	if (gameOver) {
-        return alert('you loose')
+        if(confirm('You lost. Press ok to restart')){
+          location.reload();
+        }
+        return
       }
 
   window.requestAnimationFrame(main);
