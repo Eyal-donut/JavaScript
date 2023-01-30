@@ -34,8 +34,12 @@ myFuncArrow();
 
 //? Q5
 
-document.querySelector(".element").addEventListener(() => {
+document.querySelector(".element").addEventListener('click',() => {
+  console.log(this);
+});
+document.querySelector(".element").addEventListener('click', function(){
   console.log(this);
 });
 
-// ???????????!!!!!!!!!!!!!!
+//the DOM Functions are in the window, inside the arrow function this gets the content of the of the window. to Return clg(this === window), we just need to add an event.
+//to return the element, we need to change the arrow function to a function invocation.
