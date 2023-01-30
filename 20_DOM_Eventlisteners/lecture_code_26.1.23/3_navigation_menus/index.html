@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation menus</title>
+</head>
+
+<body>
+  <ul id="menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <script>
+    const menu = document.getElementById("menu");
+    menu.addEventListener("click", function (event) {
+      event.preventDefault();
+      if (event.target.tagName === "A") {
+        console.log("Navigating to: ", event.target.getAttribute("href"));
+      }
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- 
+  In this example, we have an unordered list with three list items, each containing an anchor tag. Instead of adding an event listener to each anchor tag, we attach it to the parent element (the ul) and check which anchor tag was clicked using the event.target property.
+
+  When a user clicks on one of the anchor tags, the click event bubbles up to the parent element (the ul), where the event listener is attached. The event listener checks which anchor tag was clicked using the event.target property and the tagName property to verify if the clicked element is an A element.
+
+  Because the event is bubbling up, we are able to handle the click event on multiple anchor tags by attaching a single event listener to the parent element (the ul). This allows us to handle the navigation process more efficiently and maintainably. It also allows to preventDefault() the link from redirecting the page, and instead, you can handle the navigation process in your own way by logging the link or doing something else.
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form validation</title>
+</head>
+
+<body>
+  <form id="form">
+    <input type="text" id="name">
+    <input type="email" id="email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      if (!name || !email) {
+        alert("Please fill in both name and email fields");
+        return;
+      }
+      console.log("Name: ", name, " Email: ", email);
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- 
+  In this example, we have a simple form with two required fields (name and email). We attach an event listener to the form and check if the user filled in both fields using the value property of the input elements. If the user did not fill in both fields, we prevent the form from submitting and display an alert message. If the user did fill in both fields, we log the name and email to the console.
+
+  Here, we use event bubbling to handle the form's submit event. The event is triggered by the submit button, and it bubbles up through the parent elements, allowing me to handle the event at a higher level, which is the form element. By using event bubbling, we are able to attach a single event listener to the form, rather than having to attach an event listener to each individual form element. This allows me to perform form validation and handle the form's submission process more efficiently and maintainably.
+
+  The event is triggered by the submit button, when the user clicks on it, the event bubbles up through the parent elements, the event object is passed to the event listener attached to the form element. With event bubbling, the event object is passed to the event listeners in the order they were attached. In this example, I was able to check if the user filled in both fields using the value property of the input elements, preventing the form from submitting if the fields are not filled and displaying an alert message. If the user did fill in both fields, I logged the name and email to the console.
+-->
