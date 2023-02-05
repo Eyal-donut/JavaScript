@@ -16,7 +16,7 @@ function whoIsStronger(getStrength) {
   } else return "You are stronger";
 }
 
-//why it didn't work: why?
+//why it didn't work: when calling getStrength in line 14, it gets the value of undefined, unless we bind it to sth.
 
 let binding = hero.getStrength.bind(hero);
 console.log(whoIsStronger(binding));
