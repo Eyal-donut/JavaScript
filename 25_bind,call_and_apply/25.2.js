@@ -15,3 +15,11 @@ obj = {
 
 obj.printName()
 obj.printWithTimeout()
+
+
+
+function printHeroes(heroes, printFunc) {
+    function newFunc() {printFunc.bind(heroes)}
+    newFunc.apply(this.name, [...heroes])
+}
+printHeroes(superHeroes, printName)
