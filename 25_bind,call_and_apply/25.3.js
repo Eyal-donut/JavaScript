@@ -11,13 +11,6 @@ function printName() {
   console.log(`my name is ${this.name}`);
 }
 
-// function printHeroes(heroes, printFunc) {
-//     heroes.forEach((element)=>{
-//         printFunc.call(element)
-//     })
-// };
-// printHeroes.apply(superHeroes, printName)
-
 function printHeroes(heroes, printFunc) {
     heroes.forEach(element => {
        printFunc.call(element)
