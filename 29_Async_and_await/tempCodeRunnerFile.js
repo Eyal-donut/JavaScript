@@ -1,5 +1,11 @@
-  async function getIDs(){
-//     setTimeout(() => {
-//         const response = await [532, 543, 753, 1, 5]
-//     }, 1500)
-//   }
+getIDs()
+//   .then((IDs) => {
+//     console.log(IDs);
+//     return getRecipe(IDs[2]);
+//   })
+//   .then((recipe) => {
+//     console.log(recipe);
+//   })
+//   .catch((error) => {
+//     console.log("It is an error!");
+//   });

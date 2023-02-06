@@ -32,14 +32,14 @@ getIDs()
     console.log("It is an error!");
   });
 
-async function getReceiptAndID() {
+const retrieveRecipe = async () => {
   try {
     const ids = await getIDs();
-    console.log(ids)
     const recipes = await getRecipe(ids[2]);
     console.log(recipes);
-  } catch (error) {
-    console.log("It is an error", error);
+  } catch (err) {
+    console.log("fetch Failed", err);
   }
-}
-getReceiptAndID();
+};
+
+retrieveRecipe();
