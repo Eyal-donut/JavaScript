@@ -68,16 +68,12 @@ const table = document.querySelector('table')
 const getCharactersInfo = async (characterNum) => {
     try {
           const response = await fetch(`https://swapi.dev/api/people/${characterNum}`)
-
           if(!response.ok) throw new Error('Something went wrong')
-        
           const data = await response.json()
         
 
          const response2 = await fetch(data.homeworld)
-        
          if(!response2.ok) throw new Error('Something went wrong')
-        
          const planetData = await response2.json()
 
         characterObj = {
@@ -89,7 +85,7 @@ const getCharactersInfo = async (characterNum) => {
         }
 
         charactersArray.push(characterObj)
-
+        console.log(charactersArray)
         
         const newRow = document.createElement('tr')
         newRow.innerHTML = `<td>${data.name}</td>
@@ -98,19 +94,12 @@ const getCharactersInfo = async (characterNum) => {
         <td>${planetData.name}</td>
         <td>${planetData.population}</td>`
         table.append(newRow)
-        
-
-
-        console.log(charactersArray)
-
     } catch (error) {
         console.log(error)
-        
     }
 }
 
 function callGetCharacterInfo(startingNum, endNum){
     for(let i = startingNum; i <= endNum; ++i) getCharactersInfo(i)
 }
-
 callGetCharacterInfo(1, 10)
