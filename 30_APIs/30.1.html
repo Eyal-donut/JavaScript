@@ -24,8 +24,6 @@
         align-items: center;
         flex-direction: column;
         padding: 3rem;
-        width: 100vw;
-        height: 100vh;
       }
       form {
         display: flex;
@@ -38,17 +36,21 @@
         height: 3rem;
         margin-top: 1rem;
       }
+      .container {
+        width: 100vw;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
       .grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        height: 80%;
-        width: 100%;
+        grid-template-columns: repeat(3, 300px);
         grid-gap: 1rem;
       }
-      .picture {
+      .photo {
         width: 70%;
-        height: 60%;
+        height: 70%;
         background: blue;
         margin-bottom: 1rem;
       }
@@ -57,10 +59,14 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        border: 0.2rem solid black;
+        height: 300px;
+
       }
       .username{
         margin-bottom: 1rem;
       }
+     
     </style>
   </head>
   <body>
@@ -68,12 +74,10 @@
         <label for="search-bar">Enter github username</label>
         <input type="text" id="search-bar">
         <button id="search-btn">Search</button>
+        <submit></submit>
     </form>
-    <div class="grid">
-        <div class="user" id="user1">
-            <div class="picture"></div>
-            <div class="username"><strong>Username:</strong></div>
-            <div class="repos-number"><strong>Number of public repos:</strong></div>
+    <div class="container">
+        <div class="grid">
         </div>
     </div>
   </body>
