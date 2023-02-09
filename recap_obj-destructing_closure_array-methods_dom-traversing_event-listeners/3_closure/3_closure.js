@@ -32,9 +32,24 @@ function addMaker(value){
     return value + input
   }
 }
-const adderWithVal = addMaker(5)
-console.log(adderWithVal(3))
-
-
+const addToFive = addMaker(5)
+console.log(addToFive(3))
 
 // 3. Create a function adder that takes in a value and returns an object with two methods: add and reset. The add method takes in a number and returns the sum of the original value and the input, and the reset method resets the value back to the original value.
+const adder = (value) => {
+  return {
+    addToValue(input){
+      return value = value + input
+
+    },
+    resetValue(resetTo){
+      return value = resetTo
+    }
+  }
+}
+const addToThree = adder(3)
+console.log(addToThree.addToValue(1))
+console.log(addToThree.addToValue(1))
+console.log(addToThree.addToValue(1))
+console.log(addToThree.resetValue(3))
+console.log(addToThree.addToValue(10))
