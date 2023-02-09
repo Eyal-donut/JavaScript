@@ -281,9 +281,9 @@ const janesFriendsInclude = (friendId) => {
 console.log(janesFriendsInclude(2))
 
 // Exercise 3: Use the includes method to check if the data array includes a person with the name "Emily Davis"
-const isIncludingName = (nameInput) => {
-  return data
-  .map(person => person.name)
-  .includes(nameInput)
-}
-console.log(isIncludingName("Emily Davis"))
+  const isIncludingName = (nameInput) => {
+    return data
+    .map(person => person.name)
+    .includes(nameInput)
+  }
+  console.log(isIncludingName("Emily Davis"))

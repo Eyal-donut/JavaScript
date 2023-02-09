@@ -60,7 +60,8 @@ button.addEventListener("click", async function (event) {
     const username = input.value;
     input.value = "";
     const response = await fetch(`https:api.github.com/users/${username}`);
-    if (!response.ok) throw "Something went wrong";
+    if (!response.ok) throw new Error(`Status code Error: ${response.status}`);
+
 
     const data = await response.json();
 
@@ -72,6 +73,7 @@ button.addEventListener("click", async function (event) {
       createUser(username, numOfPublicRepo, url, link);
     }
   } catch (err) {
+    console.log("Something went wrong")
     console.log(err);
   }
 });

@@ -68,7 +68,7 @@ const table = document.querySelector('table')
 const getCharactersInfo = async (characterNum) => {
     try {
           const response = await fetch(`https://swapi.dev/api/people/${characterNum}`)
-          if(!response.ok) throw new Error('Something went wrong')
+          if(!response.ok) throw new Error(`Status code Error: ${response.status}`)
           const data = await response.json()
         
 
@@ -95,11 +95,12 @@ const getCharactersInfo = async (characterNum) => {
         <td>${planetData.population}</td>`
         table.append(newRow)
     } catch (error) {
+        console.log("Something went wrong")
         console.log(error)
     }
 }
 
-function callGetCharacterInfo(startingNum, endNum){
-    for(let i = startingNum; i <= endNum; ++i) getCharactersInfo(i)
+async function callGetCharacterInfo(startingNum, endNum){
+    for(let i = startingNum; i <= endNum; ++i) await getCharactersInfo(i)
 }
 callGetCharacterInfo(1, 10)
